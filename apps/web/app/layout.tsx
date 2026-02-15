@@ -5,6 +5,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 import { CurrencyToggle } from '@/components/CurrencyToggle';
 import { AgenticAssistant } from '@/components/AgenticAssistant';
 import { SlideCart } from '@/components/SlideCart';
+import { ProactiveCROTrigger } from '@/components/agents/ProactiveCROTrigger';
 
 export const metadata: Metadata = {
   title: 'tsgabrielle',
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main>{children}</main>
         <SlideCart />
+        <ProactiveCROTrigger />
         <AgenticAssistant />
       </body>
     </html>

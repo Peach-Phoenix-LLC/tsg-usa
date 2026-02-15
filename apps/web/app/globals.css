@@ -1,5 +1,11 @@
 :root {
   color-scheme: light;
+  --bg: #fcfaf9;
+  --surface: #ffffff;
+  --fg: #151214;
+  --muted: #5f5562;
+  --border: #d7ccd8;
+  --accent: linear-gradient(135deg, #ffd1df, #ddd3ff, #bfe7ff);
   --bg: #fbf8f6;
   --fg: #161313;
   --accent: linear-gradient(135deg, #fdbfcb, #d6c8ff, #bde8ff);
@@ -7,6 +13,15 @@
 
 :root[data-theme='dark'] {
   color-scheme: dark;
+  --bg: #120f14;
+  --surface: #1a151e;
+  --fg: #f7f0fa;
+  --muted: #c5b7cb;
+  --border: #3e3345;
+  --accent: linear-gradient(135deg, #7f3054, #4e387d, #215374);
+}
+
+* { box-sizing: border-box; }
   --bg: #121112;
   --fg: #f4eeee;
 }
@@ -27,6 +42,11 @@ body {
   top: 0;
   z-index: 200;
   backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bg), transparent 12%);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-block { font-size: 1.3rem; font-weight: 700; padding: 1rem; }
   background: color-mix(in oklab, var(--bg), transparent 15%);
   border-bottom: 1px solid color-mix(in oklab, var(--fg), transparent 85%);
 }
@@ -47,12 +67,202 @@ body {
 
 .hero {
   background: var(--accent);
+  min-height: 48vh;
   min-height: 50vh;
   padding: 3rem;
   border-radius: 0 0 2rem 2rem;
 }
 
+.chips { display: flex; gap: .5rem; margin-top: 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.assistant-panel {
+  width: min(420px, 90vw);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: grid;
+  gap: .5rem;
+}
+
 .luxury-streetwear {
   background: radial-gradient(circle at top right, #ff6aa2, #301027 55%, #0f0a12);
   color: #fef8ff;
+}
+
+input, select, textarea, button {
+  font: inherit;
+}
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: .5rem;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+
+/* Premium boutique homepage */
+.boutique-nav {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: color-mix(in oklab, var(--surface), transparent 6%);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.boutique-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.script {
+  font-family: 'Kaushan Script', 'Brush Script MT', cursive;
+}
+
+.boutique-nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boutique-nav-links a {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.boutique-nav-tools {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.search-shell {
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+}
+
+.search-shell input {
+  min-width: 180px;
+  margin: 0;
+}
+
+.boutique-hero {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.boutique-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: .5rem 0;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  padding: .8rem 1.25rem;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.products-section {
+  padding: 2rem 1.5rem 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px color-mix(in oklab, var(--fg), transparent 85%);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-meta {
+  padding: 1rem;
+}
+
+.product-actions, .fast-checkout {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.boutique-footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #7f5ad8 0%, #ffffff 100%);
+  color: #1f1930;
+}
+
+.footer-logo {
+  margin: 0 auto .75rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #d2c2f6;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 980px) {
+  .boutique-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .boutique-nav-tools {
+    justify-self: start;
+  }
 }
