@@ -8,6 +8,9 @@ const categories = [
   { name: 'Home Decor', href: '/collections/home-decor' },
   { name: 'Admin Panel', href: '/admin' }
 ] as const;
+import { MultimodalSearch } from './MultimodalSearch';
+
+const categories = ['Fashion', 'Hats', 'Phone Cases', 'Home Decor'];
 
 export function MegaMenu() {
   return (
@@ -17,6 +20,7 @@ export function MegaMenu() {
           <li key={category.name}>
             <Link href={category.href}>{category.name}</Link>
           </li>
+          <li key={category}>{category}</li>
         ))}
       </ul>
       <MultimodalSearch />

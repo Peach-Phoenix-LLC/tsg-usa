@@ -6,6 +6,9 @@
   --muted: #5f5562;
   --border: #d7ccd8;
   --accent: linear-gradient(135deg, #ffd1df, #ddd3ff, #bfe7ff);
+  --bg: #fbf8f6;
+  --fg: #161313;
+  --accent: linear-gradient(135deg, #fdbfcb, #d6c8ff, #bde8ff);
 }
 
 :root[data-theme='dark'] {
@@ -19,6 +22,13 @@
 }
 
 * { box-sizing: border-box; }
+  --bg: #121112;
+  --fg: #f4eeee;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -37,6 +47,15 @@ body {
 }
 
 .brand-block { font-size: 1.3rem; font-weight: 700; padding: 1rem; }
+  background: color-mix(in oklab, var(--bg), transparent 15%);
+  border-bottom: 1px solid color-mix(in oklab, var(--fg), transparent 85%);
+}
+
+.brand-block {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1rem;
+}
 
 .header-actions {
   position: absolute;
@@ -49,6 +68,7 @@ body {
 .hero {
   background: var(--accent);
   min-height: 48vh;
+  min-height: 50vh;
   padding: 3rem;
   border-radius: 0 0 2rem 2rem;
 }
