@@ -56,3 +56,10 @@
 - Route: `/admin`
 - API: `GET/PUT /api/admin/settings`
 - Exposes runtime configuration controls for rate limits, timeouts, sync intervals, DB pooling, webhook endpoints, RBAC toggles, and cache behavior.
+
+
+## Premium Boutique Homepage Design System
+- **Primary palette**: `#FCFAF9` (canvas), `#FFFFFF` (surface), `#151214` (ink), `#7F5AD8` (signature purple), gradient footer `#7F5AD8 -> #FFFFFF`.
+- **Spacing scale**: 4, 8, 12, 16, 24, 32, 48, 64px; cards use 16px interior and 16px radius.
+- **Typography**: Inter/system sans for UI labels and body; Kaushan Script/Brush Script for accent headlines and brand script moments.
+- **CMS portability**: Product cards are data-driven and can map directly to Shopify/WooCommerce/custom JSON via card props.
