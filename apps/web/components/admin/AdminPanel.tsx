@@ -4,10 +4,6 @@ import { useEffect, useState } from 'react';
 import type { AdminSettings } from '@/lib/admin/types';
 
 const emptySettings: AdminSettings = {
-  storeName: '',
-  contactEmail: '',
-  logoDarkBackground: '',
-  logoLightBackground: '',
   apiRateLimitPerMinute: 0,
   apiTimeoutMs: 0,
   productSyncIntervalMinutes: 0,
@@ -59,18 +55,6 @@ export function AdminPanel() {
       <p>Configure operational controls for APIs, sync jobs, RBAC, cache, and agent services.</p>
 
       <div className="grid">
-        <article className="card">
-          <h2>Store Identity</h2>
-          <label>Store Name</label>
-          <input value={settings.storeName} onChange={(e) => setSettings((p) => ({ ...p, storeName: e.target.value }))} />
-          <label>Contact Email</label>
-          <input type="email" value={settings.contactEmail} onChange={(e) => setSettings((p) => ({ ...p, contactEmail: e.target.value }))} />
-          <label>Logo (Dark Background)</label>
-          <input placeholder="https://..." value={settings.logoDarkBackground} onChange={(e) => setSettings((p) => ({ ...p, logoDarkBackground: e.target.value }))} />
-          <label>Logo (Light Background)</label>
-          <input placeholder="https://..." value={settings.logoLightBackground} onChange={(e) => setSettings((p) => ({ ...p, logoLightBackground: e.target.value }))} />
-        </article>
-
         <article className="card">
           <h2>API Controls</h2>
           <label>Rate limit / minute</label>

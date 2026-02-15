@@ -1,8 +1,4 @@
 export interface AdminSettings {
-  storeName: string;
-  contactEmail: string;
-  logoDarkBackground: string;
-  logoLightBackground: string;
   apiRateLimitPerMinute: number;
   apiTimeoutMs: number;
   productSyncIntervalMinutes: number;
@@ -20,10 +16,6 @@ export interface AdminSettings {
 }
 
 export const defaultAdminSettings: AdminSettings = {
-  storeName: 'tsgabrielle®',
-  contactEmail: 'contact@tsgabrielle.us',
-  logoDarkBackground: '',
-  logoLightBackground: '',
   apiRateLimitPerMinute: 120,
   apiTimeoutMs: 8000,
   productSyncIntervalMinutes: 15,
