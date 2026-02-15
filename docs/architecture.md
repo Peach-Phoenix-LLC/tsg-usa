@@ -50,3 +50,9 @@
 - Frontend homepage bootstrap: `apps/web/app/page.tsx`
 - Node orchestrator runtime: `services/agent-orchestrator/src/index.js`
 - Python support runtime: `services/support-rag/main.py`
+
+
+## Admin Operations Panel
+- Route: `/admin`
+- API: `GET/PUT /api/admin/settings`
+- Exposes runtime configuration controls for rate limits, timeouts, sync intervals, DB pooling, webhook endpoints, RBAC toggles, and cache behavior.

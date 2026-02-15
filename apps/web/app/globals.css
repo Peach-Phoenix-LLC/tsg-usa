@@ -82,3 +82,17 @@ body {
   background: radial-gradient(circle at top right, #ff6aa2, #301027 55%, #0f0a12);
   color: #fef8ff;
 }
+
+input, select, textarea, button {
+  font: inherit;
+}
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: .5rem;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}

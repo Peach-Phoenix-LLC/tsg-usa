@@ -5,7 +5,8 @@ const categories = [
   { name: 'Fashion', href: '/collections/fashion' },
   { name: 'Hats', href: '/collections/hats' },
   { name: 'Phone Cases', href: '/collections/phone-cases' },
-  { name: 'Home Decor', href: '/collections/home-decor' }
+  { name: 'Home Decor', href: '/collections/home-decor' },
+  { name: 'Admin Panel', href: '/admin' }
 ] as const;
 
 export function MegaMenu() {
