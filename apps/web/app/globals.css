@@ -1,0 +1,58 @@
+:root {
+  color-scheme: light;
+  --bg: #fbf8f6;
+  --fg: #161313;
+  --accent: linear-gradient(135deg, #fdbfcb, #d6c8ff, #bde8ff);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #121112;
+  --fg: #f4eeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.top-shell {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bg), transparent 15%);
+  border-bottom: 1px solid color-mix(in oklab, var(--fg), transparent 85%);
+}
+
+.brand-block {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.header-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.hero {
+  background: var(--accent);
+  min-height: 50vh;
+  padding: 3rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.luxury-streetwear {
+  background: radial-gradient(circle at top right, #ff6aa2, #301027 55%, #0f0a12);
+  color: #fef8ff;
+}
