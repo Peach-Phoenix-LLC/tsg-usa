@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  --bg: #fcfaf9;
+  --surface: #ffffff;
+  --fg: #151214;
+  --muted: #5f5562;
+  --border: #d7ccd8;
+  --accent: linear-gradient(135deg, #ffd1df, #ddd3ff, #bfe7ff);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #120f14;
+  --surface: #1a151e;
+  --fg: #f7f0fa;
+  --muted: #c5b7cb;
+  --border: #3e3345;
+  --accent: linear-gradient(135deg, #7f3054, #4e387d, #215374);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.top-shell {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bg), transparent 12%);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-block { font-size: 1.3rem; font-weight: 700; padding: 1rem; }
+
+.header-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.hero {
+  background: var(--accent);
+  min-height: 48vh;
+  padding: 3rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.chips { display: flex; gap: .5rem; margin-top: 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.assistant-panel {
+  width: min(420px, 90vw);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: grid;
+  gap: .5rem;
+}
+
+.luxury-streetwear {
+  background: radial-gradient(circle at top right, #ff6aa2, #301027 55%, #0f0a12);
+  color: #fef8ff;
+}

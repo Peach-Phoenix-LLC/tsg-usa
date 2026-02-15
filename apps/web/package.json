@@ -1,0 +1,31 @@
+{
+  "name": "@tsgabrielle/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@shopify/storefront-api-client": "^1.0.0",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.468.0",
+    "next": "^15.1.0",
+    "next-intl": "^4.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "^15.1.0",
+    "typescript": "^5.7.2"
+  }
+}

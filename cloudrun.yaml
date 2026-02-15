@@ -1,0 +1,19 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: tsgabrielle-web
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/PROJECT_ID/tsgabrielle-web:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: SHOPIFY_STOREFRONT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: shopify-storefront-token
+                  key: latest
+            - name: VERTEX_PROJECT_ID
+              value: PROJECT_ID

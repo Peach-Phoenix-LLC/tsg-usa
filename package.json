@@ -1,0 +1,16 @@
+{
+  "name": "tsgabrielle-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "services/agent-orchestrator"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @tsgabrielle/web",
+    "build": "npm run build -w @tsgabrielle/web",
+    "start": "npm run start -w @tsgabrielle/web",
+    "lint": "npm run lint -w @tsgabrielle/web",
+    "test": "npm run test -w @tsgabrielle/web"
+  }
+}
